@@ -109,6 +109,10 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/mongodb" />
       <path value="$PROJECT_DIR$/vendor/doctrine/mongodb-odm-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/mongodb-odm" />
+      <path value="$PROJECT_DIR$/vendor/nilportugues/assert" />
+      <path value="$PROJECT_DIR$/vendor/nilportugues/serializer" />
+      <path value="$PROJECT_DIR$/vendor/nilportugues/mongodb-repository" />
+      <path value="$PROJECT_DIR$/vendor/nilportugues/repository" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
