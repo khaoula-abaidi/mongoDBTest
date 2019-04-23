@@ -21,4 +21,15 @@ class UserRepository extends DocumentRepository
                 $classMetaData = $dm->getClassMetadata(User::class);
                 parent::__construct($dm, $uow, $classMetaData);
             }
+
+    /**
+     * Return the user where firstname  = $firstname
+     * @param string $firstname
+     * @return User|array
+     */
+    public function findFirstname($firstname)
+    {
+        return $this->findOneBy([
+                                'firstname' => $firstname]);
+    }
 }

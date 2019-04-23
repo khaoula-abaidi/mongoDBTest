@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Les informations de {{ user.id }}</h1>
+    <div class="col-4">
+        {{ user.firstname }}
+    </div>
+        <div class="col-4">
+           {{ user.lastname }}
+        </div>
+        <div class="col-4">
+            {{ user.email }}
+        </div>
+        <div class="col-4">
+            {{ user.password }}
+        </div>
+{% endblock %}

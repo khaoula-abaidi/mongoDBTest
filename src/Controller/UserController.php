@@ -60,4 +60,21 @@ class UserController extends AbstractController
             'users' => $users,
         ]);
     }
+
+    /**
+     * @Route("/user/{firstname}",name="user_info")
+     * @param UserRepository $repository
+     * @param string $firstname
+     * @return Response
+     */
+    public function information(UserRepository $repository, $firstname):Response{
+        /**
+         * @var User $user
+         */
+        $user = $repository->findFirstname($firstname);
+        dump($user);
+        return $this->render('user/info.html.twig',[
+            'user' => $user
+        ]);
+    }
 }
