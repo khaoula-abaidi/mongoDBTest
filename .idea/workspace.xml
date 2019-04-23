@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7f01deb-2541-4b5e-9d22-dfaba7a78fda" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/jsonTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsonTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DocumentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DocumentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/document/show.xml.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/document/show.xml.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/DocumentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+            <state relative-caret-position="435">
+              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
               <folding>
                 <element signature="e#34#59#0#PHP" expanded="true" />
               </folding>
@@ -59,16 +66,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/document/show.xml.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="59" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
+            <state relative-caret-position="150">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
@@ -105,8 +119,9 @@
         <option value="$PROJECT_DIR$/templates/user/create.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Document.php" />
         <option value="$PROJECT_DIR$/src/Entity/Decision.php" />
-        <option value="$PROJECT_DIR$/src/Controller/DocumentController.php" />
+        <option value="$PROJECT_DIR$/templates/document/myXMLs.css" />
         <option value="$PROJECT_DIR$/templates/document/show.xml.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/DocumentController.php" />
       </list>
     </option>
   </component>
@@ -226,6 +241,7 @@
       <path value="$PROJECT_DIR$/vendor/nilportugues/serializer" />
       <path value="$PROJECT_DIR$/vendor/nilportugues/mongodb-repository" />
       <path value="$PROJECT_DIR$/vendor/nilportugues/repository" />
+      <path value="$PROJECT_DIR$/vendor/twig/extensions" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -270,12 +286,6 @@
               <item name="jsonTest" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="jsonTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jsonTest" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="document" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -287,6 +297,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
@@ -319,12 +330,12 @@
       <workItem from="1555657556786" duration="631000" />
       <workItem from="1555680621301" duration="5235000" />
       <workItem from="1556002391652" duration="11688000" />
-      <workItem from="1556019010515" duration="4768000" />
+      <workItem from="1556019010515" duration="5782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30048000" />
+    <option name="totallyTimeSpent" value="31062000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -593,20 +604,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/DocumentController.php">
+    <entry file="file://$PROJECT_DIR$/templates/document/myXMLs.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-          <folding>
-            <element signature="e#34#59#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/document/show.xml.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="59" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
+        <state relative-caret-position="150">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/DocumentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding>
+            <element signature="e#34#59#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

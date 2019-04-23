@@ -33,12 +33,16 @@ class DocumentController extends AbstractController
         /**
          * @var Document $document
          */
-        $document = $documentRepository->find(1);
-        dump($document); //die;
+        $documents = $documentRepository->findAll();
+        dump($documents); //die;
         $resonse = new Response();
         $resonse->headers->set('Content-Type','xml');
+
+
+
+
         return $this->render('document/show.xml.twig',[
-                'document' => $document,
+                'documents' => $documents,
             ],$resonse);
     }
     /**
