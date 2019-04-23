@@ -32,12 +32,6 @@ class Document
      * @ORM\Column(type="text")
      */
     private $summary;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Decision", inversedBy="documents")
-     */
-    private $decision;
-
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Decision", mappedBy="document")
      */
@@ -89,17 +83,6 @@ class Document
         return $this;
     }
 
-    public function getDecision(): ?Decision
-    {
-        return $this->decision;
-    }
-
-    public function setDecision(?Decision $decision): self
-    {
-        $this->decision = $decision;
-
-        return $this;
-    }
 
     /**
      * @return Collection|Decision[]

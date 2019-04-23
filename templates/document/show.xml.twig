@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <documents>
         {% for document in documents %}
-            <document xmlns="http://symfony.com/schema/dic/twig">
-                        <id>{{ document.id }}</id>
+            <document id="{{ document.id }}"  xmlns="http://symfony.com/schema/dic/twig">
                         <doi>{{ document.doi }}</doi>
                         <title>{{ document.title }}</title>
                         <summary>{{ document.summary }}</summary>
+                    {% for decision in document.decisions %}
+                        <decision>
+                            <id>{{ decision.id }}</id>
+                        </decision>
+                    {% endfor %}
             </document>
     {% endfor %}
 </documents>
