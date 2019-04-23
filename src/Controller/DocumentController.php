@@ -16,6 +16,7 @@ use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\SerializerInterface;
 
 /**
  * @Route("/document")
@@ -23,14 +24,45 @@ use Symfony\Component\Serializer\Serializer;
 class DocumentController extends AbstractController
 {
     /**
-     * @Route("/", name="document_index", methods={"GET"})
+     * @Route("/",name="document_index")
+     * @param DocumentRepository $documentRepository
+     * @return Response
      */
-    public function index(DocumentRepository $documentRepository): Response
+    public function index(DocumentRepository $documentRepository):Response
+    {
+        /**
+         * @var Document $document
+         */
+        $document = $documentRepository->find(1);
+        dump($document); //die;
+        $resonse = new Response();
+        $resonse->headers->set('Content-Type','xml');
+        return $this->render('document/show.xml.twig',[
+                'document' => $document,
+            ],$resonse);
+    }
+    /**
+     * Route("/", name="document_index", methods={"GET"})
+
+    public function index(DocumentRepository $documentRepository, SerializerInterface $serializer)
     {
         $encoders = [new XmlEncoder(), new JsonEncoder()];
         $normalizers = [new ObjectNormalizer()];
 
         $serializer = new Serializer($normalizers, $encoders);
+        /**
+         * @var Document $document
+
+        $document = $documentRepository->find(1);
+        dump($document);
+        $xmlContent = $serializer->serialize($document,'xml',[
+            'circular_reference_handler' => /**
+             * @param Document $object
+             function($object){
+            return $object->getId();
+            }
+        ]);
+        echo $xmlContent;
                  /*
          $document = new Document();
         $document->setDoi('10-1111')
@@ -40,7 +72,7 @@ class DocumentController extends AbstractController
         $jsonContent = $serializer->serialize($document, 'json');
                 */
 // $jsonContent contains {"name":"foo","age":99,"sportsperson":false,"createdAt":null}
-        $data = <<<EOF
+    /*    $data = <<<EOF
                 <document>
                     <doi>foo</doi>
                     <title>99</title>
@@ -56,8 +88,10 @@ EOF;
         return $this->render('document/index.html.twig', [
             'documents' => $documentRepository->findAll(),
         ]);
-        */
+
     }
+        */
+
 
     /**
      * @Route("/new", name="document_new", methods={"GET","POST"})
