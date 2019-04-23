@@ -2,9 +2,12 @@
 
 namespace App\Controller;
 
+use App\Document\Product;
 use App\Entity\Document;
 use App\Form\DocumentType;
 use App\Repository\DocumentRepository;
+use App\Repository\ProductRepository;
+use Doctrine\ODM\MongoDB\DocumentManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -80,12 +83,19 @@ EOF;
     }
 
     /**
-     * @Route("/{id}", name="document_show", methods={"GET"})
+     * @Route("/show", name="document_show", methods={"GET"})
+     * @param Document $document
+     * @return Response
      */
-    public function show(Document $document): Response
+    public function show(Document $document,DocumentManager $documentManager): Response
     {
+        //$documents = $repository->findAll();
+
+        $products = $documentManager->getRepository(Product::class)->findAll();
+
+        dump($products);die;
         return $this->render('document/show.html.twig', [
-            'document' => $document,
+            'documents' => $products,
         ]);
     }
 

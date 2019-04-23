@@ -6,6 +6,7 @@ namespace App\Document;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
 /**
+ *
  * @MongoDB\Document
  */
 class Product
@@ -14,6 +15,13 @@ class Product
      * @MongoDB\Id
      */
     protected $id;
+
+    /**
+     * @return string
+     */
+    public function getId(){
+        return $this->id;
+    }
     /**
      * @MongoDB\Field(type="string")
      */
