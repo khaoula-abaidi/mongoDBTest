@@ -3,11 +3,13 @@
 namespace App\Controller;
 
 use App\Document\User;
+use App\Form\UserType;
 use App\Repository\UserRepository;
 use Doctrine\ODM\MongoDB\DocumentManager;
 use Doctrine\ODM\MongoDB\DocumentRepository;
 use MongoDB\Collection;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -21,15 +23,26 @@ class UserController extends AbstractController
      * @Route("/user/create", name="user_create")
      * @return Response
      */
-    public function create(DocumentManager $dm):Response{
+    public function create(DocumentManager $dm,Request $request):Response{
         $user = new User();
+        /**
         $user->setFirstname('khaoula');
         $user->setLastname('abaidi');
         $user->setEmail('abaidik@gmail.com');
         $user->setPassword('1111');
-        $dm->persist($user);
-        $dm->flush();
-        return new Response('Created user id '.$user->getId().'hii mongodb');
+        */
+        $form = $this->createForm(UserType::class,$user);
+        $form->handleRequest($request);
+        if($form->isSubmitted()) {
+                                     $dm->persist($user);
+                                     $dm->flush();
+                                     return $this->redirectToRoute('user_show2');
+            }
+        return $this->render('user/create.html.twig',[
+            'form' => $form->createView(),
+        ]);
+
+        //return new Response('Created user id '.$user->getId().'hii mongodb');
 
     }
 
