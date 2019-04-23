@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Document\User;
+use App\Repository\UserRepository;
 use Doctrine\ODM\MongoDB\DocumentManager;
 use Doctrine\ODM\MongoDB\DocumentRepository;
 use MongoDB\Collection;
@@ -46,6 +47,17 @@ class UserController extends AbstractController
         dump($users);
         return $this->render('user/show.html.twig',[
             'users' => $users
+        ]);
+    }
+
+    /**
+     * @Route("/user/show2",name="user_show2")
+     */
+    public function have(UserRepository $repository):Response{
+        $users = $repository->findAll();
+      //  dump($users);die;
+        return $this->render('user/show.html.twig', [
+            'users' => $users,
         ]);
     }
 }
